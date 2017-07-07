@@ -1,0 +1,49 @@
+include parts/head.pug
+body
+	include parts/header.pug
+	section.content
+		.wrapper
+			.title Предложения банков
+			.offers
+				.offers__offer.offer
+					.offer__title 
+						.offer__logo 
+							img(src="images/logo-square-alfabank.png", alt="").offer__logo-image
+						span Альфа-Банк
+					.offer__content
+						.offer__table.table
+							.table__cell.table__cell-percent
+								.table__title Ставка
+								.table__value 8%
+							.table__cell
+								.table__title Срок
+								.table__value 5 месяцев
+							.table__cell
+								.table__title Сумма кредита
+								.table__value 200 750 ₽
+							.table__cell
+								.table__title Ежемесячный платёж
+								.table__value 17 750 ₽
+						button.offer__button.button.button--action.button--size-m.button--full-width Выбрать
+				.offers__offer.offer
+					.offer__title 
+						.offer__logo 
+							img(src="images/logo-square-raiffaisen.png", alt="").offer__logo-image
+						span Райффайзен банк
+					.offer__content
+						.offer__table.table
+							.table__cell.table__cell-percent
+								.table__title Ставка
+								.table__value 8,5%
+							.table__cell
+								.table__title Срок
+								.table__value 5 месяцев
+							.table__cell
+								.table__title Сумма кредита
+								.table__value 205 250 ₽
+							.table__cell
+								.table__title Ежемесячный платёж
+								.table__value 18 050 ₽
+						button.offer__button.button.button--white.button--size-m.button--full-width Выбрать
+			.button.button--white.button--size-m.button--full-width.button-more Показать ещё 3 предложения
+	include parts/footer.pug

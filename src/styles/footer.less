@@ -1,0 +1,33 @@
+.footer {
+	width: 100%;
+	box-shadow: 0 -1px 0 @border-color;
+
+	.wrapper {
+		align-items: center;
+		height: 66px;
+
+		@media @mobile {
+			justify-content: center;
+		}
+	}
+
+	&__logo {
+		cursor: pointer;
+		transition: opacity .1s ease-in-out, filter .1s ease-in-out;
+		opacity: .25;
+		filter: saturate(0);
+
+		&:hover {
+			opacity: 1;
+			filter: saturate(1);
+		}
+
+		&-image {
+			max-width: 230px;
+
+			@media @mobile {
+				max-width: 170px;
+			}
+		}
+	}
+}

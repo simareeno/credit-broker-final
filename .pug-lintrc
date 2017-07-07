@@ -1,0 +1,6 @@
+{
+	"validateIndentation": "\t",
+	"requireLowerCaseTags": true,
+	"requireLowerCaseAttributes": true,
+	"requireLineFeedAtFileEnd": true
+}

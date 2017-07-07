@@ -1,0 +1,152 @@
+.content {
+	margin: 60px 0;
+
+	@media @mobile {
+		margin: 40px 0;
+	}
+
+	.wrapper {
+		flex-wrap: wrap;
+	}
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 30px;
+
+	@media @tablet {
+		font-size: 22px;
+	}
+
+	@media @mobile {
+		margin-bottom: 20px;
+	}
+}
+
+.table {
+	display: flex;
+
+	@media @mobile {
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__title {
+		font-size: @font-size-s;
+		margin-bottom: 10px;
+		color: @grey-color;
+
+		@media @mobile {
+			width: 135px;
+			font-size: @font-size-m;
+			line-height: 22px;
+			margin: 0;
+			margin-right: 10px;
+		}
+	}
+
+	&__value {
+		font-size: @font-size-m;
+		line-height: 22px;
+
+		@media @mobile {
+			margin: 0;
+		}
+	}
+
+	&__cell {
+		@media @mobile {
+			display: flex;
+		}
+	}
+}
+
+.table__cell-percent .table__value {
+	font-weight: bold;
+}
+
+.table__cell + .table__cell {
+	margin-left: 40px;
+
+	@media @mobile {
+		margin-left: 0;
+		margin-top: 15px;
+	}
+}
+
+.offers {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.offer {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 600px;
+	border-radius: @border-radius;
+	box-shadow: 0 0 0 1px @border-color;
+	padding: 20px 30px 30px;
+
+	@media @mobile {
+		width: 100%;
+		padding: 15px 20px;
+	}
+
+	& + & {
+		margin-top: 20px;
+	}
+
+	&__title {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		font-size: @font-size-l;
+		font-weight: bold;
+		margin-bottom: 20px;
+
+		@media @mobile {
+			// font-size: @font-size-m;
+			// margin-bottom: 20px;
+		}
+	}
+
+	&__logo {
+		margin-right: 10px;
+
+		&-image {
+			display: block;
+			width: 40px;
+			border-radius: 100%;
+
+			@media @mobile {
+				// width: 30px;
+			}
+		}
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__button {
+		margin-top: 30px;
+		max-width: 220px;
+
+		@media @mobile {
+			max-width: initial;
+			margin-top: 20px;
+		}
+	}
+}
+
+.button-more {
+	max-width: 600px;
+	margin-top: 20px;
+}

@@ -1,0 +1,39 @@
+.header {
+	box-shadow: 0 1px 0 @border-color;
+
+	.wrapper {
+		align-items: center;
+		justify-content: space-between;
+		height: 66px;
+	}
+
+	&__title {
+		font-size: @font-size-xl;
+		line-height: @line-height-normal;
+		margin-bottom: 4px;
+		color: @grey-color;
+
+		@media @tablet {
+			font-size: @font-size-xl;
+		}
+
+		@media @mobile {
+			font-size: 20px;
+		}
+	}
+
+	&__logo {
+		cursor: pointer;
+	}
+}
+
+.logo {
+	&__image {
+		display: block;
+		max-width: 145px;
+
+		@media @mobile {
+			max-width: 85px;
+		}
+	}
+}
