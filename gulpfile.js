@@ -12,12 +12,12 @@ var gulp = require('gulp'),
 	postCss = require('gulp-postcss'),
 	watch = require('gulp-watch');
 	gulpif = require('gulp-if');
+	imagemin = require('gulp-imagemin');
 	browserSync = require('browser-sync').create(),
 	runSequence = require('run-sequence'),
 	webpack = require('webpack-stream'),
 	del = require('del'),
 	join = path.join;
-
 
 var DEST = 'out',
 	SRC = 'src',
@@ -31,7 +31,7 @@ gulp.task('less', function() {
 
 	var processors = [
 		autoPrefixer({browsers: ['last 2 versions']}),
-		minify()
+		// minify()
 	];
 
 	return gulp.src(join(STYLES, 'main.less'))
@@ -43,17 +43,18 @@ gulp.task('less', function() {
 				}
 			})
 		}))
-		.pipe(sourceMaps.init())
+		// .pipe(sourceMaps.init())
 		.pipe(less())
 		.pipe(postCss(processors))
 		.pipe(concat('styles.css'))
-		.pipe(sourceMaps.write())
+		// .pipe(sourceMaps.write())
 		.pipe(gulp.dest(join(DEST, 'styles')));
 });
 
 
 gulp.task('images', function(){
 	return gulp.src(join(IMAGES, '**/*.+(png|jpg|jpeg|gif|svg)'))
+	.pipe(imagemin())
 	.pipe(gulp.dest(join(DEST, 'images')));
 });
 

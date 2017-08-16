@@ -12,16 +12,17 @@
 
 .title {
 	font-size: 24px;
+	line-height: 32px;
 	font-weight: bold;
 	width: 100%;
-	margin-bottom: 30px;
+	margin-bottom: @blocks-margin;
 
 	@media @tablet {
 		font-size: 22px;
 	}
 
 	@media @mobile {
-		margin-bottom: 20px;
+		margin-bottom: @blocks-margin-mobile;
 	}
 }
 
@@ -35,16 +36,15 @@
 	}
 
 	&__title {
-		font-size: @font-size-s;
 		margin-bottom: 10px;
+		font-size: @font-size-s;
 		color: @grey-color;
 
 		@media @mobile {
 			width: 135px;
+			margin: 0 10px 0 0;
 			font-size: @font-size-m;
 			line-height: 22px;
-			margin: 0;
-			margin-right: 10px;
 		}
 	}
 
@@ -72,8 +72,7 @@
 	margin-left: 40px;
 
 	@media @mobile {
-		margin-left: 0;
-		margin-top: 15px;
+		margin: 15px 0 0 0;
 	}
 }
 
@@ -87,9 +86,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 600px;
+	padding: 20px 30px 30px;
 	border-radius: @border-radius;
 	box-shadow: 0 0 0 1px @border-color;
-	padding: 20px 30px 30px;
 
 	@media @mobile {
 		width: 100%;
@@ -104,14 +103,9 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
+		margin-bottom: 20px;
 		font-size: @font-size-l;
 		font-weight: bold;
-		margin-bottom: 20px;
-
-		@media @mobile {
-			// font-size: @font-size-m;
-			// margin-bottom: 20px;
-		}
 	}
 
 	&__logo {
@@ -121,23 +115,19 @@
 			display: block;
 			width: 40px;
 			border-radius: 100%;
-
-			@media @mobile {
-				// width: 30px;
-			}
 		}
 	}
 
 	&__content {
-		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		width: 100%;
 	}
 
 	&__button {
-		margin-top: 30px;
 		max-width: 220px;
+		margin-top: 30px;
 
 		@media @mobile {
 			max-width: initial;

@@ -1,0 +1,42 @@
+include parts/head.pug
+body
+	include parts/header.pug
+	section.content
+		.wrapper
+			.response
+				.title Отлично, предложение выбрано!
+				.offers
+					.offers__offer.offer
+						.offer__title 
+							.offer__logo 
+								img(src="images/logo-square-alfabank.png", alt="").offer__logo-image
+							span Альфа-Банк
+						.offer__content
+							.offer__table.table
+								.table__cell.table__cell-percent
+									.table__title Ставка
+									.table__value 8%
+								.table__cell
+									.table__title Срок
+									.table__value 5&nbsp;месяцев
+								.table__cell
+									.table__title Сумма кредита
+									.table__value 200&thinsp;750&nbsp;₽
+								.table__cell
+									.table__title Ежемесячный платёж
+									.table__value 17&thinsp;750&nbsp;₽
+				.info
+					.info__title Что дальше
+					.info__text
+						.steps
+							.steps__step.step
+								.step__number 1
+								p.step__text Мы&nbsp;позвоним вам, чтобы договориться о&nbsp;доставке кредитного договора.
+							.steps__step.step
+								.step__number 2
+								p.step__text После подписания кредитного договора 
+									| вам позвонят из&nbsp;службы доставки магазина
+									| &laquo;Техносила&raquo; и&nbsp;привезут ваш телевизор Samsung.
+				.info
+					.minor-text Если у&nbsp;вас будут вопросы по&nbsp;кредиту, 
+						| звоните в&nbsp;банк по&nbsp;номеру +7&nbsp;495 78-888-78

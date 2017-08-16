@@ -1,0 +1,181 @@
+.info {
+	max-width: 600px;
+	margin-top: @blocks-margin;
+
+	@media @mobile {
+		margin-bottom: @blocks-margin-mobile;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-size: @font-size-l;
+		line-height: 24px;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: @font-size-m;
+		line-height: 24px;
+	}
+}
+
+.step {
+	display: flex;
+	position: relative;
+
+	&__number {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		height: 40px;
+		min-width: 40px;
+		margin: 5px 20px 0 0;
+		background: white;
+		color: fade(@primary, 40%);
+		box-shadow: 0 0 0 1px @border-color;
+		border-radius: 100%;
+	}
+
+	&:after {
+		position: absolute;
+		bottom: 0;
+		top: 65%;
+		left: 20px;
+		width: 1px;
+		content: '';
+		background: @border-color;
+	}
+
+	&:before {
+		position: absolute;
+		top: 0;
+		bottom: 65%;
+		left: 20px;
+		width: 1px;
+		content: '';
+		background: @border-color;
+	}
+
+	&:first-child {
+
+		&:before {
+			display: none;
+		}
+	}
+
+	&:last-child {
+
+		&:after {
+			display: none;
+		}
+	}
+
+	& + & {
+		padding-top: 20px;
+	}
+}
+
+.minor-text {
+	color: fade(@primary, 40%);
+	font-size: @font-size-s;
+	line-height: 18px;
+}
+
+.card-suggest {
+	position: relative;
+	max-width: 600px;
+	padding: 30px;
+	margin-top: @blocks-margin;
+	border-radius: @border-radius;
+	box-shadow: 0 0 0 1px @border-color;
+
+	@media @mobile {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 20px;
+		margin-top: @blocks-margin-mobile + 40px;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		font-size: @font-size-l;
+		line-height: 24px;
+		font-weight: bold;
+
+		@media @tablet {
+			text-align: left;
+		}
+
+		@media @mobile {
+			width: 100%;
+		}
+	}
+
+	&__features {
+
+		.feature {
+			max-width: 350px;
+		}
+
+		.feature + .feature {
+			margin-top: 15px;
+		}
+	}
+
+	&__card-container {
+		width: 100%;
+		text-align: center;
+	}
+
+	&__card {
+		position: absolute;
+		top: 70px;
+		right: -100px;
+		max-width: 339px;
+
+		@media @mobile {
+			position: relative;
+			top: -40px;
+			right: 0;
+			margin-bottom: -70px;
+			width: 100%;
+		}
+	}
+
+	&__button {
+		margin-top: 20px;
+
+		@media @mobile {
+			width: 100%;
+		}
+	}
+}
+
+.feature {
+	display: flex;
+	align-items: flex-start;
+	font-size: 13px;
+	color: fade(@primary, 40%);
+
+	&:before {
+		content: '';
+		display: inline-block;
+		min-width: 12px;
+		height: 9px;
+		margin: 6px 10px 0 0;
+		background-image: url(../images/feature-check.svg);
+	}
+
+	&__text {
+		display: inline-block;
+		line-height: 22px;
+	}
+
+	&__inline-logo {
+		position: relative;
+		top: 3px;
+		margin-left: 8px;
+	}
+}

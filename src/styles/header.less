@@ -8,14 +8,10 @@
 	}
 
 	&__title {
+		margin-bottom: 4px;
 		font-size: @font-size-xl;
 		line-height: @line-height-normal;
-		margin-bottom: 4px;
 		color: @grey-color;
-
-		@media @tablet {
-			font-size: @font-size-xl;
-		}
 
 		@media @mobile {
 			font-size: 20px;
@@ -24,6 +20,14 @@
 
 	&__logo {
 		cursor: pointer;
+		filter: saturate(0);
+		opacity: .25;
+		transition: filter .2s ease-in-out, opacity .2s ease-in-out;
+
+		&:hover {
+			filter: saturate(1);
+			opacity: 1;
+		}
 	}
 }
 

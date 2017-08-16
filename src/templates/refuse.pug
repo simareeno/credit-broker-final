@@ -1,0 +1,30 @@
+include parts/head.pug
+body
+	include parts/header.pug
+	section.content
+		.wrapper
+			.response
+				.title К&nbsp;сожалению, ваша заявка не одобрена
+				.info
+					.info__title Почему
+					.info__text Основные причины: плохая кредитная история, небольшой 
+						|официальный доход, небольшой стаж работы и&nbsp;наличие судимостей.
+				.info
+					.info__title Улучшите свою кредитную историю
+					.info__text Кредитную историю можно улучшить, оформив дебетовую карту. 
+						| Например, Альфа-Банк Classic.
+				.card-suggest
+					.card-suggest__card-container
+						img(src="images/alfa-bank-classic.png" width="339").card-suggest__card
+					.card-suggest__title Карта Альфа-Банк Classic
+					.card-suggest__features
+						.feature 
+							.feature__text Бесплатные доставка, выпуск и&nbsp;обслуживание
+						.feature 
+							.feature__text Apple, Android и Samsung Pay 
+						.feature 
+							.feature__text Мобильные приложения 
+								img(src="images/ios-logo.svg").feature__inline-logo 
+								img(src="images/android-logo.svg").feature__inline-logo 
+								img(src="images/wp-logo.svg").feature__inline-logo
+					button.button.button--white.button--size-m.card-suggest__button Подробнее о карте
